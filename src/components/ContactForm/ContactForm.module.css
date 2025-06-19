@@ -1,0 +1,79 @@
+.form {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff, inset 0 0 30px #08f;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.label {
+  display: block;
+  color: #0ff;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid #0ff;
+  background: transparent;
+  color: #0ff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #0ff;
+  font-family: "Orbitron", sans-serif;
+}
+
+.input::placeholder {
+  color: #66ffffaa;
+}
+
+.input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.error {
+  color: #ff3366;
+  font-weight: 700;
+  margin-top: 5px;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 5px #ff3366;
+  position: absolute;
+  bottom: -45px;
+  left: 5%;
+}
+
+.addContact {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: #000;
+  font-weight: 900;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff,
+    inset 0 0 40px #00ffff;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.addContact:hover,
+.addContact:focus {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff, 0 0 40px #00ffff,
+    inset 0 0 50px #ff00ff;
+  color: #fff;
+}

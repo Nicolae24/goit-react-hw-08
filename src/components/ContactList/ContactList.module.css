@@ -1,0 +1,10 @@
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  max-width: 1000px;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 16px;
+  flex-wrap: wrap;
+}
