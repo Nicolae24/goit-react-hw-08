@@ -1,0 +1,41 @@
+@keyframes scrollUnroll {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top center;
+  }
+  80% {
+    transform: scaleY(1.05);
+    opacity: 1;
+    transform-origin: top center;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+    transform-origin: top center;
+  }
+}
+
+.medievalToast {
+  animation: scrollUnroll 0.6s ease forwards;
+  transform-origin: top center;
+  background: url("/images/parchment-toast.jpg") no-repeat center/cover;
+  color: #3e2a14;
+  border: 2px solid #5c3a21;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  font-family: "UnifrakturCook", cursive;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  text-shadow: 1px 1px 0 #f0e5c9;
+}
+
+/* Іконки для success */
+.medievalToast--success svg path {
+  fill: #4caf50 !important;
+}
+
+/* Іконки для error */
+.medievalToast--error svg path {
+  fill: #d32f2f !important;
+}

@@ -1,0 +1,76 @@
+/* RegistrationForm.module.css */
+
+.box {
+  max-width: 380px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #1c232b;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #4d6a8a inset;
+  font-family: "Cinzel", serif;
+  color: #e0e6f0;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fieldBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #7a8b99;
+  background: #2e3a47;
+  color: #e0e6f0;
+  font-family: "Cinzel", serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input::placeholder {
+  color: #7a8b99;
+  font-style: italic;
+}
+
+.input:focus {
+  border-color: #a67c00; /* Темніший золотий акцент */
+  box-shadow: 0 0 12px #a67c00;
+  background: #394955;
+  color: #f5d88c;
+  outline: none;
+}
+
+.error {
+  color: #c0780a;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  text-shadow: 0 0 3px #c0780a;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 2px solid #a67c00;
+  background: #2f2b21; /* темний, але відмінний від логіну */
+  color: #f5d88c;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background: #a67c00;
+  color: #1c232b;
+  box-shadow: 0 0 15px #a67c00;
+  outline: none;
+}

@@ -1,0 +1,33 @@
+.header {
+  background: url("/images/got-texture.jpg") center/cover no-repeat; /* Текстура каменю/металу */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #3a3a3a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  font-family: "Cinzel", serif; /* Готичний шрифт */
+  color: #f1f1f1;
+}
+
+.header a {
+  color: #f9f9f9;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: #c0a36e; /* Колір золота */
+}
+
+.header .userMenu {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap");

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+
+/* .hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cinzel", serif;
+  color: #f5d88c;
+  text-shadow: 2px 2px 6px #000000cc;
+  overflow: hidden; 
+} */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cinzel", serif;
+  color: #f5d88c;
+  text-shadow: 2px 2px 6px #000000cc;
+  overflow: hidden;
+  transition: background-position 0.3s ease-out;
+}
+
+.overlay {
+  background: rgba(30, 15, 0, 0.75);
+  padding: 3rem 4rem;
+  border: 2px solid #c0a36e;
+  border-radius: 20px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 20px #d6af70;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-bottom: 3px solid #c0a36e;
+  padding-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #d6af70;
+}
+
+.crest {
+  margin: 2rem auto;
+  width: 120px;
+  height: 120px;
+  animation: spin 20s linear infinite;
+  filter: drop-shadow(0 0 6px #c0a36e);
+}
+
+.crestIcon {
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #f0e6d2;
+  font-weight: 600;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.sparks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.spark {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #d6af70;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #d6af70;
+  opacity: 0.8;
+  animation: sparkMove 3s linear infinite;
+}
+
+.spark:nth-child(1) {
+  top: 10%;
+  left: 50%;
+  animation-delay: 0s;
+}
+.spark:nth-child(2) {
+  top: 40%;
+  left: 80%;
+  animation-delay: 1s;
+}
+.spark:nth-child(3) {
+  top: 70%;
+  left: 30%;
+  animation-delay: 2s;
+}
+
+/* анімація руху іскор */
+@keyframes sparkMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(10px, -10px) scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+}

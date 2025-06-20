@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useId } from "react";
 import s from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContacts } from "../../redux/contactsOps";
+import { addContacts } from "../../redux/contacts/operations";
 
 const ContactFormValidationSchema = Yup.object({
   name: Yup.string().required().min(3).max(20),
@@ -27,44 +27,57 @@ const ContactForm = () => {
   };
 
   return (
-    <Formik
-      initialValues={{
-        name: "",
-        number: "",
-      }}
-      onSubmit={handleSubmit}
-      validationSchema={ContactFormValidationSchema}
-    >
-      <Form className={s.form}>
-        <label htmlFor={`${fieldId}-name`} className={s.label}>
-          Name
-          <Field
-            type="text"
-            name="name"
-            className={s.input}
-            id={`${fieldId}-name`}
-            placeholder="Enter name"
-          />
-          <ErrorMessage className={s.error} component="p" name="name" />
-        </label>
+    <>
+      <div className={s.starkCrestWrapper}>
+        <img
+          src="/public/assets/stark-crest.png"
+          alt="House Stark Crest"
+          className={s.starkCrest}
+        />
+      </div>
+      <div className={s.starkTitle}>
+        Record the name of one who has pledged loyalty to the North
+      </div>
 
-        <label htmlFor={`${fieldId}-number`} className={s.label}>
-          Number
-          <Field
-            type="tel"
-            name="number"
-            className={s.input}
-            id={`${fieldId}-number`}
-            placeholder="Enter number"
-          />
-          <ErrorMessage className={s.error} component="p" name="number" />
-        </label>
+      <Formik
+        initialValues={{
+          name: "",
+          number: "",
+        }}
+        onSubmit={handleSubmit}
+        validationSchema={ContactFormValidationSchema}
+      >
+        <Form className={s.form}>
+          <label htmlFor={`${fieldId}-name`} className={s.label}>
+            Name
+            <Field
+              type="text"
+              name="name"
+              className={s.input}
+              id={`${fieldId}-name`}
+              placeholder="Enter name"
+            />
+            <ErrorMessage className={s.error} component="p" name="name" />
+          </label>
 
-        <button className={s.addContact} type="submit">
-          Add contact
-        </button>
-      </Form>
-    </Formik>
+          <label htmlFor={`${fieldId}-number`} className={s.label}>
+            Number
+            <Field
+              type="tel"
+              name="number"
+              className={s.input}
+              id={`${fieldId}-number`}
+              placeholder="Enter number"
+            />
+            <ErrorMessage className={s.error} component="p" name="number" />
+          </label>
+
+          <button className={s.addContact} type="submit">
+            Add Ally
+          </button>
+        </Form>
+      </Formik>
+    </>
   );
 };
 

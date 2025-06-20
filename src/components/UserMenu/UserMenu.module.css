@@ -1,0 +1,44 @@
+/* UserMenu.module.css */
+
+.usermenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #1c232b; /* Темний фон */
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #7a8b99; /* Холодний сірий обвод */
+  box-shadow: 0 0 15px #4d6a8a inset;
+  font-family: "Cinzel", serif;
+  color: #cbd5e1;
+  user-select: none;
+}
+
+.span {
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.button {
+  font-family: "Cinzel", serif;
+  background: #2e3a47;
+  color: #f5d88c; /* Золотистий колір */
+  border: 2px solid #c0a36e;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 10px #c0a36e;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #c0a36e;
+  color: #1c232b;
+  box-shadow: 0 0 20px #f5d88c;
+  transform: scale(1.05);
+}

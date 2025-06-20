@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
+import { instance } from "../auth/operations";
 
-const instance = axios.create({
-    baseURL: "https://6851a3258612b47a2c0ad13a.mockapi.io",
-});
+// const instance = axios.create({
+//     baseURL: "https://6851a3258612b47a2c0ad13a.mockapi.io",
+// });
 
 export const fetchContacts = createAsyncThunk(
-    "contacts/fetchAll",
+    "contacts/fetchContacts",
     async (_, thunkAPI) => {
         try {
             const { data } = await instance.get("/contacts");
@@ -16,10 +17,10 @@ export const fetchContacts = createAsyncThunk(
         }
     },
     {
-        condition(_, { getState }) {
-            const isEmptyList = getState().contacts.items.length === 0;
-            return isEmptyList;
-        },
+        // condition(_, { getState }) {
+        //     const isEmptyList = getState().contacts.items.length === 0;
+        //     return isEmptyList;
+        // },
     }
 );
 
@@ -46,4 +47,3 @@ export const deleteContacts = createAsyncThunk(
         }
     }
 );
-
