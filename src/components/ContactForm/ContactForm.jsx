@@ -30,7 +30,7 @@ const ContactForm = () => {
     <>
       <div className={s.starkCrestWrapper}>
         <img
-          src="/public/assets/stark-crest.png"
+          src="../../../public/assets/stark-crest.png"
           alt="House Stark Crest"
           className={s.starkCrest}
         />
